@@ -1,0 +1,68 @@
+/*
+ Theme Name:   JointsWP Child
+ Description:  A child theme to customize JointsWP.
+ Author:       dsthedev
+ Author URI:   http://dsthedev.com
+ Template:     jointswp-scss
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         lit
+ Text Domain:  jointswp-dsthedev
+*/
+
+.header .top-bar {
+	background: white;
+	border-bottom: 1px solid #cacaca;
+	width: 100%;
+}
+
+.top-bar .menu {
+	background: transparent;
+}
+
+.top-bar a {
+	transition: all 0.3s ease;
+}
+
+.top-bar-right a:hover,
+.top-bar-right a:focus {
+	color: white;
+	background-color: #1779ba;
+}
+
+.top-bar-left a:hover,
+.top-bar-left a:focus {
+	transform: scale(1.1);
+}
+
+.top-bar-left .menu a {
+	padding: 0;
+}
+
+.top-bar-left .menu img {
+	margin: 0;
+	max-height: 38.4px;
+}
+
+.top-bar .top-bar-left {
+	max-width: 25%;
+}
+
+.top-bar .top-bar-right {
+	max-width: 75%;
+}
+
+.off-canvas-content .footer {
+	margin: 0;
+	border-top: 1px solid #cacaca;
+	padding-top: 1rem;
+}
+
+.back-top {
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	background-color: rgba(255,255,255,0.8);
+	padding: 0 0.5rem;
+}
