@@ -1,4 +1,4 @@
-<?php $grid_columns = 2; // Adjust the amount of rows in the grid ?>
+<?php $grid_columns = 3; // Adjust the amount of rows in the grid ?>
 
 <?php if( 0 === ( $wp_query->current_post  )  % $grid_columns ) { ?>
 
@@ -7,12 +7,12 @@
 <?php } ?>
 
 		<!--Item: -->
-		<div class="medium-6 columns text-center" data-equalizer-watch="portfolio-grid">
+		<div class="large-4 columns text-center" data-equalizer-watch="portfolio-grid">
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class('callout'); ?> role="article">
 
 				<header class="article-header">
-					<h3 class="title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+					<h3 class="title"><a class="subheader" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 				</header> <!-- end article header -->
 				<hr>
 				<section class="featured-image" itemprop="articleBody">
@@ -20,12 +20,12 @@
 				</section> <!-- end article section -->
 				<hr>
 				<footer class="entry-footer">
-					<span class="column medium-6">
-						<a class="button success expanded" href="<?php echo the_permalink(); ?>">View Details</a>
+					<span class="column small-6 text-right">
+						<a class="button" href="<?php echo the_permalink(); ?>">Details</a>
 					</span>
 					<?php if (HAS_ACFPRO) { ?>
-					<span class="column medium-6">
-						<a class="button secondary expanded" href="<?php echo get_field('epi_url'); ?>" target="_blank">Visit Site</a>
+					<span class="column small-6 text-left">
+						<a class="button secondary" href="<?php echo get_field('epi_url'); ?>" target="_blank">Visit Site</a>
 					</span>
 					<?php } ?>
 				</footer> <!-- end article footer -->

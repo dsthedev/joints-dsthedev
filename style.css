@@ -11,18 +11,41 @@
  Text Domain:  jointswp-dsthedev
 */
 
+/**** Table of Contents
+/*
+/* HEADER TOP BAR */
+/* RECENT PORTFOLIO .SLICK SLIDE IMG, */
+/* TOP BAR MENU */
+/* OFF CANVAS CONTENT FOOTER */
+/* BACK TOP */
+/* RECENT PORTFOLIO SLICK LIST */
+/* ARTICLE HEADER */
+
+
+/* HEADER TOP BAR */
 .header .top-bar {
 	background: white;
 	border-bottom: 1px solid #cacaca;
 	width: 100%;
 }
 
-.top-bar .menu {
-	background: transparent;
-}
 
+/* RECENT PORTFOLIO .SLICK SLIDE IMG, */
+.recent-portfolio .slick-slide img,
 .top-bar a {
 	transition: all 0.3s ease;
+}
+
+.recent-portfolio .slick-slide img:hover,
+.top-bar-left a:hover,
+.top-bar-left a:focus {
+	transform: scale(1.1);
+}
+
+
+/* TOP BAR MENU */
+.top-bar .menu {
+	background: transparent;
 }
 
 .top-bar-right a:hover,
@@ -30,10 +53,11 @@
 	color: white;
 	background-color: #1779ba;
 }
-
-.top-bar-left a:hover,
-.top-bar-left a:focus {
-	transform: scale(1.1);
+.top-bar {
+	transition: all 0.3s ease;
+}
+.top-bar.is-stuck {
+  box-shadow: 0 0 8px -4px black;
 }
 
 .top-bar-left .menu a {
@@ -53,16 +77,98 @@
 	max-width: 75%;
 }
 
+
+/* OFF CANVAS CONTENT FOOTER */
 .off-canvas-content .footer {
 	margin: 0;
 	border-top: 1px solid #cacaca;
 	padding-top: 1rem;
 }
 
+
+/* BACK TOP */
 .back-top {
 	position: fixed;
 	bottom: 1rem;
 	right: 1rem;
 	background-color: rgba(255,255,255,0.8);
 	padding: 0 0.5rem;
+	z-index: 10000;
 }
+
+
+/* RECENT PORTFOLIO SLICK LIST */
+.recent-portfolio .slick-list {
+	overflow: visible;
+}
+.recent-portfolio .slick-slide img,
+.slick-slide {
+	transform-origin: bottom center;
+}
+.post-type-archive-portfolio img,
+.recent-portfolio .slick-slide img {
+	display: inline-block;
+	max-width: 90%;
+	max-height: 320px;
+	width: auto;
+}
+.slickslider {
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+.slickslider.slick-initialized {
+	opacity: 1;
+}
+.slick-slide {
+	transition: all 0.3s ease;
+}
+.slick-slide:not(.slick-current) {
+	transform: scale(0.8);
+}
+
+
+/* ARTICLE HEADER */
+.article-footer {
+	position: relative;
+}
+.back-portfolio {
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-transform: uppercase;
+	font-size: 0.75rem;
+	font-weight: 800;
+	color: #999;
+}
+.back-portfolio a {
+	transition: all 0.3s ease;
+	color: inherit;
+}
+.back-portfolio:before {
+	content: '< ';
+	font-weight: 900;
+}
+.back-portfolio a:hover,
+.back-portfolio a:focus {
+	color: #333;
+}
+
+
+/* ARCHIVE DRAFTS BANNER */
+.archive-drafts-banner .accordion {
+	max-width: 768px;
+	margin: 0 auto;
+}
+.archive-drafts-banner .disabled {
+	color: #666;
+	background-color: rgba(0,0,0,0.125);
+	cursor: not-allowed;
+}
+.archive-drafts-banner .disabled:after {
+	content: ' ... Sorry, no link!';
+	font-size: 10px;
+}
+
+
+/* ARCHIVE DRAFTS BANNER */
+.archive-grid {}

@@ -4,14 +4,17 @@
 
 		<div id="inner-content" class="row">
 
-				<main id="main" class="columns" role="main">
+			<main id="main" class="columns" role="main">
 
-					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+				<?php if (have_posts()) :
 
-					<!-- To see additional archive styles, visit the /parts directory -->
-					<?php get_template_part( 'parts/loop', 'portfolio-grid' ); ?>
+					joints_page_navi();
 
-				<?php endwhile; ?>
+					while (have_posts()) : the_post(); ?>
+
+						<?php get_template_part( 'parts/loop', 'portfolio-grid' ); ?>
+
+					<?php endwhile; ?>
 
 					<?php joints_page_navi(); ?>
 
@@ -21,11 +24,11 @@
 
 				<?php endif; ?>
 
-				</main> <!-- end #main -->
-
-				<?php //get_sidebar(); ?>
+			</main> <!-- end #main -->
 
 		</div> <!-- end #inner-content -->
+
+		<?php get_template_part( 'parts/archive', 'drafts-banner' ); ?>
 
 	</div> <!-- end #content -->
 

@@ -14,9 +14,11 @@
 
 				<?php endwhile; endif; ?>
 
+				<hr>
 			</main> <!-- end #main -->
-
 		</div> <!-- end #inner-content -->
+
+		<?php get_template_part( 'parts/recent', 'portfolio' ); ?>
 
 	</div> <!-- end #content -->
 
